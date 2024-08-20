@@ -8,6 +8,7 @@ def pretty_list(request):
     """ 靓号列表 """
 
     data_dict = {}
+    # 查询包含“q”的电话号码，如果q不存在则默认为空字符串
     search_data = request.GET.get('q', "")
     if search_data:
         data_dict["mobile__contains"] = search_data
